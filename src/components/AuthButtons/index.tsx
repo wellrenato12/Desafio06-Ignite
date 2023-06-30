@@ -11,11 +11,13 @@ type AuthButtonsProps = {
 export const AuthButtons = ({ canGuest, callbackUrl = '/' }: AuthButtonsProps) => {
   const router = useRouter()
 
-  const handleSignIn = (provider?: string) => {
+  const handleSignIn = (e?: any, provider?: string) => {
     if(!provider) {
       router.push(callbackUrl)
       return
     }
+
+    e.preventDefault()
 
     signIn(provider, {
       callbackUrl
@@ -24,17 +26,11 @@ export const AuthButtons = ({ canGuest, callbackUrl = '/' }: AuthButtonsProps) =
 
   return (
     <Container>
-      <AuthButton onClick={(e) => {
-        e.preventDefault()
-        handleSignIn('google')
-      }}>
+      <AuthButton onClick={() => handleSignIn('google')}>
         <img src="/images/icons/google.svg" alt="Google logo" />
         Entrar com Google
       </AuthButton>
-      <AuthButton onClick={(e) => {
-        e.preventDefault()
-        handleSignIn('github')
-      }}>
+      <AuthButton onClick={() => handleSignIn('github')}>
         <img src="/images/icons/github.svg" alt="Github logo" />
         Entrar com Github
       </AuthButton>
