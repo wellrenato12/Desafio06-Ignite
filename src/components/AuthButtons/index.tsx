@@ -12,12 +12,11 @@ export const AuthButtons = ({ canGuest, callbackUrl = '/' }: AuthButtonsProps) =
   const router = useRouter()
 
   const handleSignIn = (e?: any, provider?: string) => {
-    e.preventDefault()
     if(!provider) {
       router.push(callbackUrl)
       return
     }
-    
+    e.preventDefault()
     signIn(provider, {
       callbackUrl
     })
