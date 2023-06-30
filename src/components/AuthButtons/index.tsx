@@ -11,13 +11,12 @@ type AuthButtonsProps = {
 export const AuthButtons = ({ canGuest, callbackUrl = '/' }: AuthButtonsProps) => {
   const router = useRouter()
 
-  const handleSignIn = (e?: any, provider?: string) => {
+  const handleSignIn = (provider?: string, e?: any) => {
+    e.preventDefault()
     if(!provider) {
       router.push(callbackUrl)
       return
     }
-
-    e.preventDefault()
 
     signIn(provider, {
       callbackUrl
