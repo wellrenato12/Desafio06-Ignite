@@ -19,4 +19,14 @@ export const AuthButton = styled('button', {
   display: 'flex',
   alignItems: 'center',
   gap: '$5',
+
+  '@media only screen and (max-width: 550px)': {
+    height: 55,
+    fontSize: '$xs',
+    padding: '0 $3',
+
+    'img': {
+      width: 20,
+    }
+  },
 })

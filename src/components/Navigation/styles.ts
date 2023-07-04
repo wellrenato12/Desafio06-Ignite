@@ -4,7 +4,11 @@ import { styled } from "../../../stitches.config";
 export const Container = styled('nav', {
   display: 'flex',
   flexDirection: 'column',
-  gap: '$7'
+  gap: '$7',
+
+  '@media only screen and (max-width: 600px)': {
+    gap: '$3',
+  },
 })
 
 export const NavItemContainer = styled(Link, {
@@ -44,5 +48,9 @@ export const NavItemContainer = styled(Link, {
         }
       }
     }
-  }
+  },
+
+  '@media only screen and (max-width: 600px)': {
+    fontSize: 10
+  },
 })

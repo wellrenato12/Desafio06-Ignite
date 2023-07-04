@@ -32,5 +32,9 @@ export const InputContainer = styled("div", {
     "&:focus": {
       outline: "none"
     }
-  }
+  },
+
+  '@media only screen and (max-width: 700px)': {
+    width: '90%',
+  },
 })

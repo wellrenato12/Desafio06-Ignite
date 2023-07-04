@@ -37,13 +37,32 @@ export const UserDetails = styled('div', {
   section: {
     display: 'flex',
     alignItems: 'center',
-    gap: '$4'
-  }
+    gap: '$4',
+  },
+
+  '@media only screen and (max-width: 600px)': {
+    flexDirection: 'column',
+  },
 })
 
 export const BookDetails = styled('div', {
   display: 'flex',
   gap: '$5',
+
+  '@media screen and (max-width: 1150px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+
+  '@media screen and (max-width: 900px)': {
+    flexDirection: 'row',
+    alignItems: 'initial',
+  },
+
+  '@media screen and (max-width: 750px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
 
   img: {
     borderRadius: 4,

@@ -22,4 +22,8 @@ export const Container = styled('button', {
       },
     },
   },
+
+  '@media only screen and (max-width: 475px)': {
+    padding: '$1 $3',
+  },
 })

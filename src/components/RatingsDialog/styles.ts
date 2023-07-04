@@ -32,6 +32,10 @@ export const DialogContent = styled(Dialog.Content, {
   "&::-webkit-scrollbar-thumb": {
     background: '$gray600',
   },
+
+  '@media only screen and (max-width: 1000px)': {
+    width: '100%',
+  },
 })
 
 export const DialogClose = styled(Dialog.Close, {
@@ -56,6 +60,11 @@ export const BookDetailsWrapper = styled('div', {
 export const BookDetailsContainer = styled('div', {
   display: 'flex',
   gap: '$8',
+
+  '@media only screen and (max-width: 475px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
 })
 
 export const BookImage = styled(Image, {
@@ -75,5 +84,10 @@ export const BookInfos = styled('div', {
   paddingTop: 24,
   borderTop: '1px solid $gray600',
   display: 'flex',
-  gap: 60
+  gap: 60,
+
+  '@media only screen and (max-width: 475px)': {
+    display: 'flex',
+    flexDirection: 'column',
+  },
 })

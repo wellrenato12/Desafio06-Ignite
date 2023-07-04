@@ -18,7 +18,16 @@ export const Container = styled('aside', {
   '.logo': {
     width: 128,
     marginBottom: 64,
-  }
+  },
+
+  '@media only screen and (max-width: 600px)': {
+    width: 120,
+
+    '.logo': {
+      width: 90,
+      marginBottom: 32,
+    }
+  },
 })
 
 export const LoginButton = styled(Link, {
@@ -32,6 +41,10 @@ export const LoginButton = styled(Link, {
 
   svg: {
     color: '$green100',
+  },
+
+  '@media only screen and (max-width: 600px)': {
+    fontSize: 12
   },
 })
 
@@ -49,5 +62,9 @@ export const UserDetails = styled('div', {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
+  },
+
+  '@media only screen and (max-width: 600px)': {
+    flexDirection: 'column',
   },
 })

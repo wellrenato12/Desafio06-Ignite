@@ -16,6 +16,12 @@ export const LogoSection = styled('section', {
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: 10,
+
+  '@media only screen and (max-width: 550px)': {
+    'img': {
+      width: 175,
+    }
+  },
 })
 
 export const WelcomeSection = styled('section', {

@@ -10,7 +10,12 @@ export const ExploreContainer = styled("section", {
   "> header": {
     display: "flex",
     justifyContent: "space-between",
-  }
+
+    '@media only screen and (max-width: 875px)': {
+      flexDirection: "column",
+      gap: 10,
+    },
+  },
 });
 
 export const TagsContainer = styled("div", {
@@ -19,6 +24,12 @@ export const TagsContainer = styled("div", {
   gap: "$3",
   marginTop: 40,
   marginBottom: 48,
+
+  '@media only screen and (max-width: 475px)': {
+    gap: "$1",
+    marginTop: 20,
+    marginBottom: 24,
+  },
 })
 
 export const BooksGrid = styled("div", {
@@ -32,5 +43,13 @@ export const BooksGrid = styled("div", {
 
   "&::-webkit-scrollbar": {
     display: "none"
+  },
+
+  '@media only screen and (max-width: 1285px)': {
+    gridTemplateColumns: "repeat(2, 1fr)",
+  },
+
+  '@media only screen and (max-width: 875px)': {
+    gridTemplateColumns: "1fr",
   },
 })

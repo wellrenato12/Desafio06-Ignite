@@ -7,6 +7,10 @@ export const Container = styled('div', {
   gap: '$4',
   marginTop: 40,
 
+  '@media screen and (max-width: 900px)': {
+    overflow: 'scroll',
+  },
+
   header: {
     display: 'flex',
     alignItems: 'center',
