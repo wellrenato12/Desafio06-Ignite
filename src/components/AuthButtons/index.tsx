@@ -24,11 +24,17 @@ export const AuthButtons = ({ canGuest, callbackUrl = '/' }: AuthButtonsProps) =
 
   return (
     <Container>
-      <AuthButton onClick={() => handleSignIn('google')}>
+      <AuthButton onClick={(e) => {
+        e.preventDefault()
+        handleSignIn('google')
+      }}>
         <img src="/images/icons/google.svg" alt="Google logo" />
         Entrar com Google
       </AuthButton>
-      <AuthButton onClick={() => handleSignIn('github')}>
+      <AuthButton onClick={(e) => {
+        e.preventDefault()
+        handleSignIn('github')
+      }}>
         <img src="/images/icons/github.svg" alt="Github logo" />
         Entrar com Github
       </AuthButton>
